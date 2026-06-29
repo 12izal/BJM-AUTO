@@ -89,9 +89,13 @@ width:100%;
 
 z-index:999;
 
-padding:22px 0;
+padding:18px 0;
 
-transition:.35s ease;
+transition:
+background .35s,
+padding .35s,
+box-shadow .35s,
+backdrop-filter .35s;
 
 background:transparent;
 
@@ -125,39 +129,30 @@ height:60px;
 
 }
 
-.menu a{
-
-margin-left:30px;
-
-font-weight:600;
+.navbar-nav .nav-link{
 
 color:#fff;
-
+font-weight:600;
+padding:.8rem 1rem;
 transition:.3s;
 
 }
 
-.navbar-custom.scrolled .menu a{
-
-color:#fff;
-
-}
-
-.navbar-custom.scrolled .menu a:hover{
+.navbar-nav .nav-link:hover{
 
 color:#ef4444;
 
 }
 
-.menu a:hover{
+.navbar-toggler{
 
-color:var(--primary);
+padding:0;
 
 }
 
-.hero{
+.navbar-toggler:focus{
 
-margin-top:90px;
+box-shadow:none;
 
 }
 
@@ -250,7 +245,7 @@ margin-top:80px;
 }
 
 .footer h3,
-.footer h5{
+.footer h5 {
 
 margin-bottom:20px;
 
@@ -324,71 +319,131 @@ z-index:999;
 
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-.section{
+body{
+    font-size:14px;
+}
 
-padding:50px 0;
+/* Navbar */
+
+.navbar-custom{
+
+    padding:10px 0;
+    background:transparent;
 
 }
 
-.menu{
+.navbar-custom.scrolled{
+    padding:10px 0;
+}
 
-display:none;
+.logo{
+    height:46px;
+}
 
+/* Section */
+
+.section{
+    padding:35px 0;
 }
 
 .section-title{
+    font-size:24px;
+    margin-bottom:8px;
+}
 
-font-size:28px;
+.section-subtitle{
+    font-size:14px;
+    margin-bottom:25px;
+}
 
+/* Card */
+
+.card-body{
+    padding:12px;
+}
+
+.card-product img{
+    height:150px;
+}
+
+.price{
+    font-size:18px;
+}
+
+/* Button */
+
+.btn{
+    font-size:14px;
+    padding:.5rem 1rem;
 }
 
 /* Footer */
 
 .footer{
-
-text-align:left;
-
-padding:45px 0;
-
-}
-
-.footer .col-lg-5,
-
-.footer .col-lg-4,
-
-.footer .col-lg-3{
-
-margin-bottom:35px;
-
+    padding:35px 0;
+    margin-top:40px;
 }
 
 .footer h3{
-
-font-size:34px;
-
-margin-bottom:18px;
-
+    font-size:24px;
 }
 
 .footer h5{
+    font-size:18px;
+}
 
-margin-bottom:15px;
-
+.footer p{
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:12px;
 }
 
 .footer .social{
+    gap:16px;
+    font-size:26px;
+}
 
-gap:22px;
+.footer .col-lg-5,
+.footer .col-lg-4,
+.footer .col-lg-3{
+    margin-bottom:20px;
+}
 
-font-size:34px;
+.whatsapp{
+    width:58px;
+    height:58px;
+    font-size:24px;
+    right:15px;
+    bottom:15px;
+}
+
+/* ===========================
+   MENU MOBILE
+=========================== */
+
+.navbar-collapse{
+
+background:#111827;
+margin-top:15px;
+padding:20px;
+border-radius:16px;
+transition:.35s ease;
+box-shadow:0 15px 40px rgba(0,0,0,.18);
 
 }
 
-.footer hr{
+.navbar-nav{
 
-margin:20px 0;
+text-align:center;
+
+}
+
+.navbar-nav .nav-link{
+
+padding:14px 0;
+font-size:16px;
 
 }
 
@@ -402,62 +457,66 @@ margin:20px 0;
 
 <body>
 
-<nav class="navbar-custom {{ request()->is('mobil/*') ? 'scrolled' : '' }}">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom {{ request()->is('mobil/*') ? 'scrolled' : '' }}">
 
-<div class="container">
+    <div class="container">
 
-<div class="d-flex justify-content-between align-items-center">
+        {{-- Logo --}}
+        <a class="navbar-brand" href="{{ route('home') }}">
+            <img src="{{ asset('images/logo.png') }}" class="logo" alt="BJM AUTO">
+        </a>
 
-<a href="{{ route('home') }}">
+        {{-- Tombol menu HP --}}
+        <button class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu"
+            aria-controls="navbarMenu"
+            aria-expanded="false">
 
-    <img
-        src="{{ asset('images/logo.png') }}"
-        class="logo"
-        alt="BJM AUTO">
+            <span class="navbar-toggler-icon"></span>
 
-</a>
+        </button>
 
-<div class="menu d-none d-lg-block">
+        {{-- Menu --}}
+        <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
 
-<a href="#home">
+            <ul class="navbar-nav align-items-lg-center">
 
-Home
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
 
-</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#mobil">Mobil</a>
+                </li>
 
-<a href="#mobil">
+                <li class="nav-item">
+                    <a class="nav-link" href="#tentang">Tentang</a>
+                </li>
 
-Mobil
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontak">Kontak</a>
+                </li>
 
-</a>
+                <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
 
-<a href="#tentang">
+                    <a href="https://wa.me/{{ $company->whatsapp }}"
+                        class="btn btn-success rounded-pill px-4 w-100">
 
-Tentang
+                        <i class="bi bi-whatsapp"></i>
 
-</a>
+                        WhatsApp
 
-<a href="#kontak">
+                    </a>
 
-Kontak
+                </li>
 
-</a>
+            </ul>
 
-<a
-href="https://wa.me/{{ $company->whatsapp }}"
-class="btn btn-success rounded-pill px-4 ms-3">
+        </div>
 
-<i class="bi bi-whatsapp"></i>
-
-WhatsApp
-
-</a>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </nav>
 
@@ -667,15 +726,7 @@ if (!isDetailPage) {
 
     window.addEventListener('scroll', function () {
 
-        if (window.scrollY > 50) {
-
-            navbar.classList.add('scrolled');
-
-        } else {
-
-            navbar.classList.remove('scrolled');
-
-        }
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
 
     });
 
