@@ -77,7 +77,7 @@ Tidak Ada Foto
 
 </div>
 
-<div class="col-lg-5">
+<div class="col-lg-5 detail-card">
 
 <div class="card border-0 shadow rounded-4">
 
@@ -348,18 +348,43 @@ height:40px;
 }
 
 .detail-hero{
-    margin-top:90px !important;
-    padding-top:0 !important;
+    margin-top:90px;
     padding-bottom:50px;
+}
+
+/* Card Detail */
+
+.detail-card{
+    padding-left:28px;
+}
+
+@media(max-width:992px){
+
+.detail-card{
+
+    margin-top:28px;
+
+    padding-left:12px;
+
+    padding-right:12px;
+
+}
+
 }
 
 @media(max-width:768px){
 
 .detail-hero{
 
-padding-top:80px;
+    margin-top:75px;
 
-padding-bottom:30px;
+    padding-bottom:30px;
+
+}
+
+.carousel-item img{
+
+    height:250px !important;
 
 }
 

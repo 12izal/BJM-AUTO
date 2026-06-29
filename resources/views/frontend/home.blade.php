@@ -479,18 +479,103 @@ background:#111;
 
 @media(max-width:768px){
 
+.hero-slider{
+
+    height:auto;
+
+    margin-top:0;
+
+}
+
+.heroSwiper{
+
+height:auto;
+
+}
+
+.heroSwiper .swiper-slide{
+
+height:auto;
+
+display:block;
+
+}
+
+.hero-bg{
+
+position:relative;
+
+height:auto;
+
+}
+
+.hero-bg img{
+
+width:100%;
+
+height:auto;
+
+aspect-ratio:16/9;
+
+object-fit:cover;
+
+border-radius:0;
+
+}
+
+.hero-overlay{
+
+display:none;
+
+}
+
+.hero-content{
+
+position:relative;
+
+max-width:100%;
+
+text-align:center;
+
+color:#111827;
+
+padding:25px 20px 35px;
+
+}
+
+.hero-small{
+
+font-size:15px;
+
+margin-bottom:8px;
+
+}
+
 .hero-content h1{
 
-font-size:42px;
+font-size:34px;
+
+font-weight:700;
+
+margin:10px 0;
 
 }
 
 .hero-content p{
 
-font-size:18px;
+font-size:16px;
+
+margin-bottom:22px;
+
+color:#666;
 
 }
 
+.hero-content .btn{
+
+width:220px;
+
+}
 
 }
 

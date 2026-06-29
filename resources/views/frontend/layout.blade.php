@@ -95,7 +95,8 @@ transition:
 background .35s,
 padding .35s,
 box-shadow .35s,
-backdrop-filter .35s;
+backdrop-filter .35s,
+transform .35s;
 
 background:transparent;
 
@@ -253,9 +254,11 @@ margin-bottom:20px;
 
 .footer p{
 
-margin-bottom:18px;
+margin-bottom:10px;
 
-line-height:1.8;
+line-height:1.55;
+
+font-size:14px;
 
 }
 
@@ -396,28 +399,47 @@ body{
 }
 
 .footer h3{
-    font-size:24px;
+
+    font-size:20px;
+
+    margin-bottom:12px;
+
 }
 
 .footer h5{
-    font-size:18px;
+
+    font-size:17px;
+
+    margin-bottom:10px;
+
 }
 
 .footer p{
-    font-size:14px;
-    line-height:1.6;
-    margin-bottom:12px;
+
+    font-size:13px;
+
+    line-height:1.45;
+
+    margin-bottom:8px;
+
 }
 
 .footer .social{
-    gap:16px;
-    font-size:26px;
+
+gap:14px;
+
+font-size:22px;
+
+margin-top:10px;
+
 }
 
 .footer .col-lg-5,
 .footer .col-lg-4,
 .footer .col-lg-3{
-    margin-bottom:20px;
+
+    margin-bottom:16px;
+
 }
 
 .whatsapp{
@@ -435,11 +457,16 @@ body{
 .navbar-collapse{
 
 background:#111827;
-margin-top:15px;
-padding:20px;
-border-radius:16px;
+
+margin-top:0;
+
+padding:15px 20px 20px;
+
+border-radius:0;
+
+box-shadow:none;
+
 transition:.35s ease;
-box-shadow:0 15px 40px rgba(0,0,0,.18);
 
 }
 
@@ -661,11 +688,11 @@ target="_blank">
 
 <hr class="border-secondary my-4">
 
-<div class="text-center">
+<div class="text-center small text-light opacity-75">
 
-© {{ date('Y') }}
+© {{ date('Y') }} {{ $company->company_name }}
 
-{{ $company->company_name }}
+<br>
 
 All Rights Reserved.
 
@@ -733,11 +760,15 @@ const isDetailPage = window.location.pathname.startsWith('/mobil/');
 
 if (!isDetailPage) {
 
-    window.addEventListener('scroll', function () {
+    function updateNavbar() {
 
         navbar.classList.toggle('scrolled', window.scrollY > 50);
 
-    });
+    }
+
+    updateNavbar();
+
+    window.addEventListener('scroll', updateNavbar);
 
 }
 
