@@ -107,7 +107,7 @@ box-shadow:none;
 
 background:#111827;
 
-padding:14px 0;
+padding:8px 0;
 
 box-shadow:0 10px 30px rgba(0,0,0,.20);
 
@@ -125,7 +125,7 @@ transition:.3s;
 
 .navbar-custom.scrolled .logo{
 
-height:60px;
+height:46px;
 
 }
 
@@ -329,17 +329,26 @@ body{
 
 .navbar-custom{
 
-    padding:10px 0;
-    background:transparent;
+    padding:8px 0;
 
 }
 
 .navbar-custom.scrolled{
-    padding:10px 0;
+
+    padding:6px 0;
+
 }
 
 .logo{
-    height:46px;
+
+    height:38px;
+
+}
+
+.navbar-custom.scrolled .logo{
+
+    height:38px;
+
 }
 
 /* Section */

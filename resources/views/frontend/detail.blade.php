@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="hero py-5">
+<section class="hero detail-hero">
 
 <div class="container">
 
@@ -342,6 +342,24 @@ font-size:16px;
 font-size:14px;
 
 height:40px;
+
+}
+
+}
+
+.detail-hero{
+    margin-top:90px !important;
+    padding-top:0 !important;
+    padding-bottom:50px;
+}
+
+@media(max-width:768px){
+
+.detail-hero{
+
+padding-top:80px;
+
+padding-bottom:30px;
 
 }
 
