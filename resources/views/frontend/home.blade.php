@@ -154,7 +154,7 @@
 
             <p class="section-subtitle">
 
-                Pilihan mobil baru & bekas terbaik.
+                Pilihan mobil baru & bekas terbaik, dan berbagai produk kami
 
             </p>
 
@@ -240,7 +240,7 @@ Lihat Detail
 
 <div class="alert alert-warning text-center">
 
-Belum ada mobil tersedia.
+Belum ada produk tersedia.
 
 </div>
 
