@@ -13,7 +13,7 @@ use Illuminate\Support\Str;
 class ProductController extends Controller
 {
     /**
-     * Daftar kendaraan
+     * Daftar product
      */
     public function index()
     {
@@ -25,7 +25,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Form tambah kendaraan
+     * Form tambah product
      */
     public function create()
     {
@@ -33,7 +33,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Simpan kendaraan
+     * Simpan product
      */
     public function store(Request $request)
     {
@@ -87,7 +87,7 @@ class ProductController extends Controller
 
             return redirect()
                 ->route('product.index')
-                ->with('success', 'Kendaraan berhasil ditambahkan.');
+                ->with('success', 'Produk berhasil ditambahkan.');
 
         } catch (\Exception $e) {
 
@@ -99,8 +99,8 @@ class ProductController extends Controller
         }
     }
 
-        /**
-     * Form edit kendaraan
+    /**
+     * Form edit product
      */
     public function edit(Product $product)
     {
@@ -110,7 +110,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Update kendaraan
+     * Update product
      */
     public function update(Request $request, Product $product)
     {
@@ -181,7 +181,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Hapus kendaraan
+     * Hapus product
      */
 
 public function destroy(Product $product)
@@ -208,7 +208,7 @@ public function destroy(Product $product)
 
         return redirect()
             ->route('product.index')
-            ->with('success','Kendaraan berhasil dihapus.');
+            ->with('success','Produk berhasil dihapus.');
 
     } catch (\Exception $e) {
 

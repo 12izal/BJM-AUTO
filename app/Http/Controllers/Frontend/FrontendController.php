@@ -35,7 +35,7 @@ class FrontendController extends Controller
     }
 
     /**
-     * Detail Mobil
+     * Detail Product
      */
     public function detail(Product $product)
     {
