@@ -152,7 +152,7 @@ Kembali
 
 <h2 class="section-title">
 
-Mobil Lainnya
+Produk Lainnya
 
 </h2>
 
@@ -243,7 +243,7 @@ Lihat Detail
 
 <div class="alert alert-warning text-center">
 
-Belum ada mobil lainnya.
+Belum ada produk lainnya.
 
 </div>
 

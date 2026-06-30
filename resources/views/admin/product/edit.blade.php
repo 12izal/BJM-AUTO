@@ -13,11 +13,11 @@
                 <div>
 
                     <h3 class="fw-bold mb-1">
-                        Edit Kendaraan
+                        Edit Produk
                     </h3>
 
                     <small class="text-muted">
-                        Perbarui data kendaraan showroom BJM AUTO
+                        Perbarui data produk showroom BJM AUTO
                     </small>
 
                 </div>
@@ -39,7 +39,7 @@
 
                     <h4 class="mb-0">
 
-                        📷 Galeri Kendaraan
+                        📷 Galeri Produk
 
                     </h4>
 
@@ -140,7 +140,7 @@
 
                     <h4 class="mb-0">
 
-                        📝 Informasi Kendaraan
+                        📝 Informasi Produk
 
                     </h4>
 

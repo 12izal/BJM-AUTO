@@ -14,7 +14,7 @@
 
 <h3 class="mb-1">
 
-Tambah Kendaraan
+Tambah Produk
 
 </h3>
 
@@ -206,13 +206,13 @@ placeholder="Tuliskan kondisi kendaraan, pajak, service record, kelengkapan sura
 
 </div>
 
-<div class="text-end">
+<div class="save-button-wrapper">
 
 <button
 
-class="btn btn-primary btn-lg px-5">
+class="btn btn-primary btn-lg rounded-pill save-btn">
 
-💾 Simpan Kendaraan
+💾 Simpan Produk
 
 </button>
 
@@ -275,6 +275,44 @@ object-fit:cover;
 border-radius:15px;
 
 box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.save-button-wrapper{
+
+display:flex;
+
+justify-content:flex-end;
+
+margin-top:30px;
+
+}
+
+.save-btn{
+
+min-width:240px;
+
+font-weight:600;
+
+padding:12px 30px;
+
+}
+
+@media(max-width:768px){
+
+.save-button-wrapper{
+
+justify-content:center;
+
+}
+
+.save-btn{
+
+width:85%;
+
+max-width:320px;
+
+}
 
 }
 

@@ -8,7 +8,7 @@
 
         <div class="card-box">
 
-            <h6>Total Product</h6>
+            <h6>Total Produk</h6>
 
             <h2>
 

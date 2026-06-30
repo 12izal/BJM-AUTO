@@ -148,7 +148,7 @@
 
             <h2 class="section-title">
 
-                Mobil Terbaru
+                Produk Terbaru
 
             </h2>
 

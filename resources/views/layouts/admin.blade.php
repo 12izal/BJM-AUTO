@@ -40,7 +40,7 @@
 
         :root{
 
-            --sidebar-width:280px;
+            --sidebar-width:250px;
             --sidebar-bg:#0f172a;
             --sidebar-hover:#1e293b;
             --primary:#2563eb;
@@ -94,39 +94,55 @@
 
             align-items:center;
 
-            gap:14px;
+            gap:12px;
 
-            padding:15px 28px;
+            padding:12px 22px;
 
-            color:#d1d5db;
+            margin:4px 12px;
+
+            color:#ffffff;
 
             text-decoration:none;
 
+            font-size:15px;
+
+            font-weight:500;
+
+            border-radius:10px;
+
             transition:.25s;
 
-            font-size:16px;
-
-        }
+}
 
         .menu a:hover{
 
-            background:var(--sidebar-hover);
+            color:#ffffff;
 
-            color:#fff;
+            background:#1e293b;
+
+            transform:translateX(4px);
 
         }
 
         .menu a.active{
 
-            background:var(--primary);
+            color:#ffffff;
 
-            color:#fff;
+            background:#2563eb;
+
+            box-shadow:0 8px 20px rgba(37,99,235,.35);
 
         }
 
         .menu i{
 
-            font-size:19px;
+            width:22px;
+
+            text-align:center;
+
+            font-size:18px;
+
+            flex-shrink:0;
 
         }
 
@@ -144,7 +160,7 @@
 
         .topbar{
 
-            height:72px;
+            height:64px;
 
             background:#fff;
 
@@ -168,7 +184,7 @@
 
         .page{
 
-            padding:30px;
+            padding:24px;
 
         }
 
@@ -240,9 +256,27 @@
 
             .page{
 
-                padding:20px;
+                padding:16px;
 
             }
+
+        }
+
+        .card{
+
+            border:none;
+
+            border-radius:18px;
+
+            box-shadow:0 10px 30px rgba(15,23,42,.08);
+
+        }
+
+        .card-header{
+
+            border-radius:18px 18px 0 0 !important;
+
+            font-weight:600;
 
         }
 
@@ -278,7 +312,7 @@
 
             <i class="bi bi-car-front-fill"></i>
 
-            Product
+            Produk
 
         </a>
 
@@ -305,7 +339,7 @@
 
             <i class="bi bi-building"></i>
 
-            Company Profile
+            Halaman Publik
 
         </a>
 
@@ -329,15 +363,15 @@
 
 <i class="bi bi-list mobile-toggle" id="toggleSidebar"></i>
 
-<h4 class="mb-0 fw-bold">
+<h5 class="mb-0 fw-bold">
 
 BJM AUTO Dashboard
 
-</h4>
+</h5>
 
 </div>
 
-<div class="fw-semibold">
+<div class="text-secondary fw-semibold">
 
 Halo, {{ auth()->user()->name ?? 'Admin' }}
 

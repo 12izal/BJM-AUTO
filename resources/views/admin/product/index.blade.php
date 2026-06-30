@@ -10,13 +10,13 @@
 
             <h2 class="fw-bold mb-0">
 
-                Kendaraan
+                Halaman Produk
 
             </h2>
 
-            <small class="text-muted"><
+            <small class="text-muted">
 
-                Kelola seluruh kendaraan showroom.
+                Kelola seluruh produk showroom.
 
             </small>
 
@@ -27,7 +27,7 @@
 
             <i class="bi bi-plus-circle"></i>
 
-            Tambah Kendaraan
+            Tambah Produk
 
         </a>
 
@@ -223,13 +223,13 @@ class="btn btn-danger w-100">
 
 <h4>
 
-Belum Ada Kendaraan
+Belum Ada Produk
 
 </h4>
 
 <p>
 
-Silakan tambah kendaraan pertama.
+Silakan tambah produk pertama.
 
 </p>
 

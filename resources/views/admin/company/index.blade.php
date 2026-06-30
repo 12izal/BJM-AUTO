@@ -310,11 +310,11 @@ Media Sosial
 
 <hr>
 
-<div class="text-end">
+<div class="save-button-wrapper mt-4">
 
     <button
         type="submit"
-        class="btn btn-primary btn-lg px-5 rounded-pill">
+        class="btn btn-primary btn-lg rounded-pill save-btn">
 
         💾 Simpan Perubahan
 
@@ -333,5 +333,49 @@ Media Sosial
 </div>
 
 </div>
+
+@push('styles')
+
+<style>
+
+.save-button-wrapper{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+.save-btn{
+
+    min-width:240px;
+
+    font-weight:600;
+
+    padding:12px 30px;
+
+}
+
+@media(max-width:768px){
+
+    .save-button-wrapper{
+
+        justify-content:center;
+
+    }
+
+    .save-btn{
+
+        width:85%;
+
+        max-width:320px;
+
+    }
+
+}
+
+</style>
+
+@endpush
 
 @endsection

@@ -524,7 +524,7 @@ font-size:16px;
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#mobil">Mobil</a>
+                    <a class="nav-link" href="#mobil">Produk</a>
                 </li>
 
                 <li class="nav-item">
